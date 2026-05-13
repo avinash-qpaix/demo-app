@@ -67,3 +67,19 @@ jobs:
              sleep 2 &&
              curl -f http://localhost:3000/health &&
              kill %1
+
+deploy-production:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    needs: code-quality
+    environment: production
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Simulate production deploy
+        run: |
+          echo "✅ Approval received!"
+          echo "🚀 Deploying demo-app:v1 to production..."
+          echo "🌐 App live at http://localhost:3000"
