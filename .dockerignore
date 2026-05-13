@@ -1,0 +1,10 @@
+node_modules
+coverage
+.github
+.git
+*.log
+.env
+.env.*
+README.md
+jest.config.js
+.eslintrc.json
